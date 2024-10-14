@@ -1,0 +1,29 @@
+
+svg {
+    border: 1px solid black;
+        max-width: 100%; /* Максимальная ширина 100% от родителя */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+
+}
+svg .tick {
+    fill: black;
+}
+svg .point {
+    fill: red;
+}
+svg .grid{
+    stroke: gray;
+    stroke-width: 0.5;
+}
+/* Стили для всех элементов с классом 'label' внутри svg */
+svg .label {
+    font-size: 6px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-weight: normal;
+}
+svg .figure{
+    fill:lightgray;
+    stroke:gray; /* Цвет границы полукруга*/
+    stroke-width: 1;
+}
