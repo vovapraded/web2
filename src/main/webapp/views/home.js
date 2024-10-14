@@ -14,6 +14,7 @@ function initialize() {
     initForm();
     initResetButton();
     initInteraction();
+    initUpdatingOfTable()
 }
 
 function initResetButton() {
@@ -27,5 +28,10 @@ function initResetButton() {
         alert("Session data has been reset!");
     });
 }
-
-
+function initUpdatingOfTable(){
+    window.addEventListener('pageshow', function() {
+        // Проверяем, есть ли сохраненное состояние при загрузке страницы
+        console.log("aboba");
+        displaySessionData();
+    });
+}

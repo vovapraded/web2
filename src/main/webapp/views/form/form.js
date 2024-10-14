@@ -1,4 +1,5 @@
 import {initTable, displaySessionData} from "../table/table.js";
+import {forwardToCheckPage} from "../forward/forward.js";
 
 function setOnButtonAction() {
     document.getElementById('myForm').addEventListener('submit', function (event) {
@@ -7,9 +8,7 @@ function setOnButtonAction() {
         // Собираем данные формы
         const formData = new FormData(this); // this указывает на форму
         const queryString = new URLSearchParams(formData).toString(); // Преобразуем данные формы в строку запроса
-        // Перенаправляем с параметрами на другой URL
-        window.location.href = "/controller?" + queryString; // Замените "/controller" на нужный URL
-
+        forwardToCheckPage(queryString);
         // Здесь можно также добавить обработку данных, если нужно что-то делать до перехода
     });
 }

@@ -2,6 +2,7 @@ import {displaySessionData, initTable} from './table/table.js';
 document.addEventListener('DOMContentLoaded', () => {
     onLoading();
     initTable();
+    initBack();
 
 });
 function onLoading(){
@@ -26,3 +27,14 @@ function onLoading(){
 // Сохраняем обновленные данные в sessionStorage
     sessionStorage.setItem('formData', JSON.stringify(sessionData));
 }
+function initBack(){
+    const form = document.getElementById('homeForm');
+    form.addEventListener('submit', function(event) {
+        // Останавливаем стандартное поведение формы (перезагрузка страницы)
+        event.preventDefault();
+
+        history.back();  // Имитируем нажатие на кнопку "Назад"
+
+    });
+}
+

@@ -30,7 +30,7 @@
         <!-- Здесь будут появляться строки -->
         </tbody>
       </table>
-      <form action="/controller" method="GET">
+      <form id="homeForm" method="GET">
         <button type="submit">Go to Home</button>
       </form>
     </td>

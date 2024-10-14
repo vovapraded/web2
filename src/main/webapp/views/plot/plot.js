@@ -69,8 +69,8 @@ function createQuarterCircle(R) {
     // Создаем путь для полукруга
     let path = document.createElementNS(svgNamespace, 'path');
     let d = `M 100 100
-             L ${100 + R * multiplier/R} 100
-             A ${R * multiplier/R} ${R * multiplier/R} 0 0 0 100 ${100 - R * multiplier/R}
+             L ${100 + multiplier} 100
+             A ${multiplier} ${ multiplier} 0 0 0 100 ${100 - multiplier}
              Z`;
     path.setAttribute('d', d);
     path.setAttribute("class","figure");

@@ -1,4 +1,5 @@
 import {createPoint, getSelectedR, updatePlot} from "../plot/plot.js";
+import {forwardToCheckPage} from "../forward/forward.js";
 
 // Получаем элемент SVG по его ID
 const svg = document.getElementById('mySvg');
@@ -27,14 +28,16 @@ export function initInteraction() {
 
 
         // Создаём точку на графике
-        createPoint(x, y, "point");
+        createPoint(x, y, "point",R);
 
         // Формируем строку запроса с координатами
         const queryString = `x=${x}&y=${y}&R=${R}`;
         console.log("x"+x);
         console.log("y"+y);
 
-        window.location.href = `/controller?${queryString}`;
+// Пример для изменения URL без перезагрузки страницы
 
+// Изменение URL без перезагрузки страницы
+    forwardToCheckPage(queryString);
     });
 }
