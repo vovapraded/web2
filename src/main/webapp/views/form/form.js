@@ -26,8 +26,8 @@ export function initForm() {
    setValidationX();
     setValidationY();
 }
-function setValidationX(){
-    document.getElementById('xInput').addEventListener('input', function (event) {
+function setValidationY(){
+    document.getElementById('yInput').addEventListener('input', function (event) {
         const input = event.target;
         const value = input.value;
 
@@ -57,8 +57,8 @@ function setValidationX(){
         }
     });
 }
-function setValidationY(){
-    document.getElementById('yInput').addEventListener('input', function (event) {
+function setValidationX(){
+    document.getElementById('xInput').addEventListener('input', function (event) {
         const input = event.target;
 
         console.log(input.getAttribute('value')); // Это нужно, если вы хотите обновить значение атрибута value в HTML
